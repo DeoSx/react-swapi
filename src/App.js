@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
 import Header from './components/Header/Header';
 import RandomPlanet from './components/RandomPlanet/RandomPlanet';
@@ -15,6 +15,7 @@ export default class App extends Component {
     this.setState({
       selectedPerson: id
     });
+    console.log(id);
   };
 
   render() {
