@@ -11,8 +11,7 @@ export default class RandomPlanet extends Component {
     error: false
   };
 
-  constructor() {
-    super();
+  componentDidMount() {
     this.updatePlanet();
   }
 
@@ -29,7 +28,7 @@ export default class RandomPlanet extends Component {
 
   updatePlanet() {
     const swapiPlanet = new SwapiService();
-    const id = Math.floor(Math.random() * 25) + 2;
+    const id = Math.floor(Math.random() * 25) + 3;
     // const id = 123123;
     swapiPlanet
       .getPlanet(id)
@@ -55,7 +54,7 @@ export default class RandomPlanet extends Component {
 }
 
 const PlanetData = ({ planet }) => {
-  const { population, rotationPeriod, diametr, id, name } = planet;
+  const { population, rotationPeriod, diameter, id, name } = planet;
 
   return (
     <React.Fragment>
@@ -76,7 +75,7 @@ const PlanetData = ({ planet }) => {
           </li>
           <li className='list-group-item'>
             <span className='term'>Diameter</span>
-            <span>{diametr}</span>
+            <span>{diameter}</span>
           </li>
         </ul>
       </div>
