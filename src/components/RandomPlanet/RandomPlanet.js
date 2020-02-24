@@ -26,7 +26,7 @@ export default class RandomPlanet extends Component {
 
   render() {
     const {
-      planet: {population, rotationPeriod, diametr, id, name}
+      planet: {population, rotationPeriod, diameter, id, name}
     } = this.state;
 
     return (
@@ -48,7 +48,7 @@ export default class RandomPlanet extends Component {
             </li>
             <li className='list-group-item'>
               <span className='term'>Diameter</span>
-              <span>{diametr}</span>
+              <span>{diameter}</span>
             </li>
           </ul>
         </div>
