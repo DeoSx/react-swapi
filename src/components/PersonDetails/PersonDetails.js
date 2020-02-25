@@ -34,7 +34,7 @@ export default class PersonDetails extends Component {
 
   render() {
     if (!this.state.person) {
-      return <span>Select a person from list</span>;
+      return <div className="person-details card"><span >Select a person from list</span></div>
     }
     if (this.state.loading) {
       return <Loader />;
